@@ -1,25 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+
+
+
   <body>
+    <!--
+    The main <div class="card"> for each application interface
+      insedc
+      Inside there are three sections:
+      1- Search Section (.search).
+      2- Error Section (.error).
+      3- Weather Section (.weather)
+      -->
     <div class="card">
+
+
+
+      <!--
+      1-Search Section:
+        Contains: 
+        1-Input Filed : in the input filed inseart a City Name
+        2-Button is a serch icon : Click to Saerch City in the API Withers
+      -->
       <div class="search">
         <input type="text" placeholder="enter city name" spellcheck="false" />
-        <button><img src="images/search.png" /></button>
+        <button type="submit"><img src="images/search.png" alt="Search Icon" /></button>
       </div>
+
+      <!--
+      2-Error Section : Use this to disply Error for example City is Not Found
+      CSS: disply error is none if the city is found else diplay = block
+      -->
       <div class="error">
         <p>Invalid city name</p>
       </div>
+
+      <!--
+      3-Weather Section: Have a 4 Rows: imge , temp , city, details 
+      -->
       <div class="weather">
+
+        <!--Ther First Row is Imge the Weather -->
         <img src="images/rain.png" class="weather-icon" />
+
+        <!--The Scound Row the Temprther -->
         <h1 class="temp">22°C</h1>
+
+        <!--The Thered Row is a City Neame-->
         <h2 class="city">New Yourk</h2>
+
+        <!--Forth  Row Datalis Hava a Two Columns-->
         <div class="details">
+
+
+          <!--First Columns is Humidity-->
           <div class="col">
             <img src="images/humidity.png" />
             <div>
@@ -27,6 +69,9 @@
             <p>humidity</p>
           </div>
         </div>
+
+
+        <!--Secand Columns Wind Speed -->
         <div class="col">
             <img src="images/wind.png">
             <div>
@@ -34,8 +79,13 @@
                 <p>Wind Speed</p>
             </div>
         </div>
+
       </div>
+
+
     </div>
+
+
     <script src="main.js">
 
     </script>
