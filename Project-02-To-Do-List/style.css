@@ -1,3 +1,4 @@
+/*Global Style*/
 * {
   margin: 0;
   padding: 0;
@@ -5,9 +6,94 @@
   box-sizing: border-box;
 }
 
+/*Container App Style*/
 .container {
   width: 100%;
   min-height: 100vh;
   background: linear-gradient(135deg, #153677, #4e085f);
   padding: 10px;
+}
+
+/*Style Elemnts .todo-app : h2 & img Title & Logo*/
+.todo-app {
+  width: 100%;
+  max-width: 540px;
+  background: #fff;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+}
+/*Style h2:Title */
+.todo-app h2 {
+  color: #002765;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+/*Style title & logo*/
+.todo-app h2 img {
+  width: 30px;
+  margin-left: 10px;
+}
+
+/*Style row inside the row is a Input Filed  & button*/
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #edeef0;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+/*Style Input Filed */
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+  font-weight: 14px;
+}
+/*Style Buuton*/
+button {
+  outline: none;
+  border: none;
+  padding: 16px 50px;
+  background: #ff5945;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 40px;
+}
+/*Style List Tasks */
+ul li {
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+/*Style The Task unCheked images*/
+ul li::before {
+  content: "";
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-image: url(images/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  top: 8px;
+  left: 8px;
+}
+/*Style Don Checked Task*/
+ul li.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+/*Style Don checked Task imge*/
+ul li.checked::before {
+  background-image: url(images/checked.png);
 }
